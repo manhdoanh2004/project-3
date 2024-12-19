@@ -1,0 +1,37 @@
+//- mixin product-item(item)
+//-   a(href=item.link class="")
+//-     div(class="aspect-square bg-[#F0EEED] sm:rounded-[20px] rounded-[13px] truncate sm:mb-[20px] mb-[12px]")
+//-       img(
+//-         src=item.image
+//-         alt=item.title
+//-         class="w-[100%] h-[100%] object-cover"
+//-       )
+//-     h3(class="font-[700] sm:text-[18px] text-[14px] text-primary sm:mb-[10px] mb-[6px] text-left" ) #{item.title}
+//-     div(class="flex items-center gap-x-[13px] sm:mb-[10px] mb-[6px]")
+//-       div(class="inline-flex sm:gap-x-[5px] gap-x-[4px] sm:text-[18px] text-[15px] text-[#FFC633]")
+//-         - for(var i = 1; i <= item.stars; i++)
+//-           <i class="fa-solid fa-star"></i>
+//-         - for(var j = item.stars + 1; j <= 5; j++)
+//-           <i class="fa-regular fa-star"></i>
+//-       div(class="font-[400] sm:text-[14px] text-[12px] text-[#00000099]")
+//-         | #{item.stars}/5
+//-     div(class="flex flex-wrap items-center gap-x-[10px] gap-y-[6px]")
+//-       div(class="font-[700] sm:text-[18px] text-[14px] text-black")
+//-         | #{item.discount > 0 ? item.priceSpecial.toLocaleString() : item.price.toLocaleString("vi-VN")}đ
+//-       if(item.discount > 0)
+//-         div(class="font-[700] sm:text-[14px] text-[12px] text-[#00000066] line-through")
+//-           | #{item.price.toLocaleString("vi-VN")}đ
+//-         div(class="bg-[#FF33331A] rounded-[62px] sm:py-[6px] py-[3.5px] sm:px-[12px] px-[6.5px] font-[500] sm:text-[12px] text-[10px] text-[#FF3333]")
+//-           | -#{item.discount}%
+
+include ../mixins/product-item.pug
+
+mixin section-2(titlemain,productlist,index,color)
+    div(class=" pt-[62px]")
+        div(class=("container mx-auto px-[16px] pb-[62px] " +(index ? `border-b-[${index}] border-black`: `border-b-0` )))
+            div(class="text-center")
+                h2(class="font-[700] text-[48px] leading-[60px] mb-[54px] ") #{titlemain}
+                div(class="grid xl:grid-cols-4  lg:grid-cols-3 grid-cols-2   gap-[20px] ")
+                   each item11 in productlist
+                    +product-item(item11)
+                a(  href="#" class=" mt-[40px] sm:inline-block block  px-[54px] py-[16px] border-[#0000001A] border-[1px] rounded-[62px]") Xem thêm

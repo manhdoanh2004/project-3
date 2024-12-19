@@ -1,0 +1,123 @@
+doctype html
+html
+    head 
+        block title
+        script(src="https://cdn.tailwindcss.com")
+        script(src="tailwind.config.js")
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link( rel="stylesheet" href="assets/css/style.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css")
+        
+    
+    body
+        //-Top header
+        div(class=" bg-textdark py-[10px]")
+            div(class="container mx-auto text-textlight px-[16px]") 
+                div(class="flex justify-center")
+                    div(class=" flex-1 text-center")
+                        span(class="text-[14px] font-[400] leading-[17px]") Đăng kí ngay ngay để giảm 20%.
+                        a(href="#" class="underline text-[14px] font-[500] leading-[17px]") 
+                            | Đăng Ký Ngay
+                    button(class="text-[13px]") <i class="fa-solid fa-xmark"></i>
+
+        //- End Top header
+        
+        //-Header
+        header(class="sm:py-[24px] py-[20px]")
+            div(class="container  mx-auto  px-[16px] ")
+                div(class="wrap flex md:gap-[40px] gap-[16px] items-center")
+                    button(class="md:hidden block text-[18px] text-textdark") <i class="fa-solid fa-bars"></i>
+                    div(class="logologo lg:flex-none flex-1") 
+                        a(href="#" class="font-[700] sm:text-[32px] text-[25px] leading-[40px]") 28.SHOP
+                    na(class="md:block hidden ")
+                        ul(class="flex gap-[24px]")
+                            li
+                                a(href="#" class="font-[400] text-[16px] leading-[20px]") Giới Thiệu
+                            li
+                                a(href="#" class="font-[400] text-[16px] leading-[20px]") Sản Phẩm
+                            li
+                                a(href="#" class="font-[400] text-[16px] leading-[20px]") Bài Viết
+                            li
+                                a(href="#" class="font-[400] text-[16px] leading-[20px]") Liên Hệ
+                    form(class="lg:flex hidden flex-1 gap-[12px] bg-[#F0F0F0] rounded-[62px] py-[12px] px-[16px] items-center " action="#")
+                        input(class=" order-1 outline-none  bg-[transparent] text-[16px] font-[400] leading-[20px]" type="text"  placeholder="Tìm kiếm sản phẩm...")
+                        button(class="text-[#00000066] text-[20px] ") <i class="fa-solid fa-magnifying-glass"></i>
+                   
+                    div(class="flex gap-[14px] items-center")
+                        div(class=" flex md:hidden flex text-[20px]")  <i class="fa-solid fa-magnifying-glass"></i>
+                        a(href="#" class="text-[20px]") <i class="fa-solid fa-cart-shopping"></i>
+                        a(href="#" class="text-[20px]") <i class="fa-regular fa-circle-user"></i>
+                        
+        //-End Header
+        
+        block main
+
+
+        //-Footer
+        footer(class="bg-[#F0F0F0] mt-[90px]")
+            div(class="container mx-auto px-[16px]")
+                div(class="bg-textdark rounded-[20px] md:px-[64px] px-[24px] md:py-[36px] py-[32px] xl:gap-[212px] gap-[40px] flex flex-wrap  relative top-[-85px] ")
+                    div(class="text-textlight font-[700] xl:text-[40px] text-[32px] xl:leading-[54px] leading-[44px]  lg:w-[55%] w-[100%] ") CẬP NHẬT VỀ ƯU ĐÃI MỚI NHẤT CỦA CHÚNG TÔI
+                    div(class="flex flex-1 flex-col gap-[14px] justify-center ")
+                        form(class=" px-[16px] py-[12px] bg-textlight rounded-[20px]  gap-[12px] flex   items-center")
+                            input(type="text" placeholder="Nhập email của bạn..." class=" bg-[transparent] outline-none order-1  " )
+                            <i class="fa-regular fa-envelope text-[#00000066]   "></i>
+                        
+                        a( href="#" class="text-textdark  px-[16px] py-[12px]  bg-textlight font-[500] text-[16px] leading-[20px] rounded-[20px] text-center  ") Đăng Ký Nhận Tin
+                div(class="xl:flex block gap-x-[103px]  flex-wrap items-center border-b-[1px] border-[#0000001A] py-[48px]   ")
+                    div(class="xl:w-[20%] w-[100%] xl:mb-[0px] mb-[35px]")
+                        div(class=" ")
+                        h3(class="font-[700] text-[33px] leading-[42px] xl:text-left sm:text-center text-left ")  28.SHOP
+                        p(class="font-[400] text-[14px] leading-[22px] text-[#00000099] sm:mt-[25px] mt-[20px] inline-block  xl:text-left sm:text-center text-left") Chúng tôi có 
+                            |những bộ quần áo phù hợp với phong cách của bạn và bạn có thể tự hào khi mặc.
+                        ul(class="flex gap-[12px] mt-[35px] xl:justify-start sm:justify-center justifly-start ")
+                            li(class="") 
+                                a(href="#" class="" ) 
+                                    img(src="assets/Img/Footer-twitter.svg", alt="" class="h-[28px]")
+                            li(class="") 
+                                    a(href="#" class="" ) 
+                                        img(src="assets/Img/Footer-facebook.svg", alt="" class="h-[28px]")
+                            li(class="") 
+                                        a(href="#" class="" ) 
+                                            img(src="assets/Img/Footer-instasgram.svg", alt="" class="h-[28px]")
+                    div(class="flex flex-1 md:gap-x-[103px] gap-x-[56px]  md:gap-y-[103px] gap-y-[32px] flex-wrap   md:justify-center justify-between ")
+                        div(class="")
+                            h4(class="font-[500] text-[16px] leading-[18px]") CÔNG TY
+                            ul(class="font-[400] text-[16px] leading-[19px] text-[#00000099] mt-[25px] flex  flex-col gap-y-[23px]")
+                                li(class="") Giới Thiệu          
+                                li(class="") Sản Phẩm 
+                                li(class="") Công Việc   
+                                li(class="") Việc Làm  
+                        div(class="")
+                            h4(class="font-[500] text-[16px] leading-[18px]") Trợ giúp
+                            ul(class="font-[400] text-[16px] leading-[19px] text-[#00000099] mt-[25px] flex  flex-col gap-y-[23px]")
+                                li(class="") Hỗ Trợ Khách Hàng      
+                                li(class="") Thông Tin Đơn Hàng
+                                li(class="") Điều Khoản & Điều Kiện  
+                                li(class="") Chính Sách 
+                        div(class="")
+                            h4(class="font-[500] text-[16px] leading-[18px]") FAQ
+                            ul(class="font-[400] text-[16px] leading-[19px] text-[#00000099] mt-[25px] flex  flex-col gap-y-[23px]")
+                                li(class="") Tài Khoản
+                                li(class="") Quản Lý Đơn Hàng
+                                li(class="") Đơn Hàng   
+                                li(class="") Thanh Toán   
+                        div(class=" sm:pr-[0px] pr-[70px]")
+                            h4(class="font-[500] text-[16px] leading-[18px]") Tài nguyên
+                            ul(class="font-[400] text-[16px] leading-[19px] text-[#00000099] mt-[25px] flex  flex-col gap-y-[23px]")
+                                li(class="") Sách Miễn Phí       
+                                li(class="") Bài Viết 
+                                li(class="") Kiến Thức  
+                                li(class="") Youtube   
+                div(class=" flex-wrap justify-between mt-[30px] pb-[81px] sm:flex block")
+                    div(class="font-[400] text-[14px] leading-[17px] text-[#00000099] sm:block flex sm:justify-start justify-center  ") 28.SHOP © 2024, All Rights Reserved
+                    div(class="flex gap-x-[12px]  sm:justify-start justify-center sm:mt-[0px] mt-[20px]")
+                        img(src="assets/Img/footer-bg-1.png", class="h-[30px]" alt="")
+                        img(src="assets/Img/footer-bg-2.png", class="h-[30px]" alt="")
+                        img(src="assets/Img/footer-bg-3.png", class="h-[30px]" alt="")
+                        img(src="assets/Img/footer-bg-4.png", class="h-[30px]" alt="")
+                        img(src="assets/Img/footer-bg-5.png", class="h-[30px]" alt="")
+
+        //-End Footer
+
